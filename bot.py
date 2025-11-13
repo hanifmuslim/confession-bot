@@ -15,7 +15,7 @@ TARGET_CHAT_ID = os.environ['TARGET_CHAT_ID']
 pending_confessions = {}
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text("🤫 Confession Bot - Send me your confession!")
+    await update.message.reply_text("🤫 Send your confession!")
 
 async def handle_confession(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if update.message.chat.type != "private":
@@ -38,7 +38,7 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
     
     if query.data == "confirm" and user_id in pending_confessions:
         confession_text = pending_confessions[user_id]
-        confession_message = f"💌 Confession:\n\n{confession_text}"
+        confession_message = f":\n\n{confession_text}"
         
         await context.bot.send_message(chat_id=TARGET_CHAT_ID, text=confession_message)
         await context.bot.send_message(chat_id=ADMIN_CHAT_ID, text=f"New confession: {confession_text}")
