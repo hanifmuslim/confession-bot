@@ -8,9 +8,9 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 # Get config from environment
-BOT_TOKEN = os.environ['BOT_TOKEN']
-ADMIN_CHAT_ID = os.environ['ADMIN_CHAT_ID']
-TARGET_CHAT_ID = os.environ['TARGET_CHAT_ID']
+BOT_TOKEN = os.environ['8006129358:AAElFwaLQMPYOeS4l97Cti8uNISU0Kw0RZs']
+ADMIN_CHAT_ID = os.environ['663072655']
+TARGET_CHAT_ID = os.environ['-1002096830555']
 
 pending_confessions = {}
 
